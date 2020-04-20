@@ -23,6 +23,7 @@ public class NoiseSettings {
         public float baseRoughness = 1;
         public float minValue;
         public Vector3 center;
+        public int seed = 0;
     }
 
     [System.Serializable]
