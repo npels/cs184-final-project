@@ -62,7 +62,9 @@ public class TerrainFace {
                 Vector3 pointOnUnitCube = localUp + (percent.x - 0.5f) * 2 * axisA + (percent.y - 0.5f) * 2 * axisB;
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
                 float unscaledElevation = shapeGenerator.CalculateUnscaledElevation(pointOnUnitSphere);
-                Vector3 vertexPosition = pointOnUnitSphere * shapeGenerator.GetScaledElevation(unscaledElevation);
+                float scaledElevation = shapeGenerator.GetScaledElevation(unscaledElevation);
+                // shapeGenerator.elevationMinMax.AddValue(scaledElevation);
+                Vector3 vertexPosition = pointOnUnitSphere * scaledElevation;
                 float vertexUV = unscaledElevation;
                 AddVertex(vertexPosition, vertexUV, i, ref vertices, ref uv, ref borderVertices);
 
