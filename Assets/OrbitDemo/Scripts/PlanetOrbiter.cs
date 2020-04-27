@@ -37,7 +37,7 @@ public class PlanetOrbiter : MonoBehaviour
         Vector3 distanceVector = this.transform.position - star.transform.position; 
         float r = distanceVector.magnitude;
 
-        float totalForce = - (star.Mass() * this.Mass()) / (Mathf.Max(0.5f, r*r));
+        float totalForce = - star.Mass / (Mathf.Max(0.5f, r*r));
         Vector3 gravityForce = (distanceVector).normalized * totalForce;
         
         GetComponent<Rigidbody>().AddForce(gravityForce);
@@ -47,7 +47,7 @@ public class PlanetOrbiter : MonoBehaviour
         Vector3 distanceVector = this.transform.position - star.transform.position; 
         float r = distanceVector.magnitude;
         
-        float v = Mathf.Sqrt(star.Mass() / Mathf.Max(r, 1f));
+        float v = Mathf.Sqrt(star.Mass / Mathf.Max(r, 1f));
         Vector3 tangentialDirection = Vector3.Cross(distanceVector, transform.up).normalized;
         
         GetComponent<Rigidbody>().velocity = v * tangentialDirection;
@@ -64,10 +64,6 @@ public class PlanetOrbiter : MonoBehaviour
 
     void SetRandomPlanetMaterial() {
         GetComponent<Renderer>().material = planetMaterials[Random.Range(0, planetMaterials.Length)];
-    }
-
-    public float Mass() {
-        return 1f;
     }
 
 }
