@@ -25,7 +25,7 @@ public class PlanetUI : MonoBehaviour {
         LoadSettings();
     }
 
-    private void LoadSettings() {
+    public void LoadSettings() {
         var nl = planet.shapeSettings.noiseLayers[0];
         switch (nl.noiseSettings.filterType) {
             case NoiseSettings.FilterType.Simple:

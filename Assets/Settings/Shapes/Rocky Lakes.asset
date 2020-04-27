@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbd9cda6a4c96046b37e4e8bf1cf81b, type: 3}
+  m_Name: Rocky Lakes
+  m_EditorClassIdentifier: 
+  planetRadius: 0.5
+  noiseLayers:
+  - enabled: 1
+    useFirstLayerAsMask: 0
+    noiseSettings:
+      filterType: 0
+      simpleNoiseSettings:
+        numLayers: 6
+        strength: 0.18815485
+        roughness: 4.1021433
+        persistance: 0.2
+        baseRoughness: 1.7911365
+        minValue: 0.3650259
+        center: {x: 0, y: 0, z: 0}
+        seed: -42011042
+      rigidNoiseSettings:
+        numLayers: 1
+        strength: 1
+        roughness: 2
+        persistance: 0.5
+        baseRoughness: 1
+        minValue: 0
+        center: {x: 0, y: 0, z: 0}
+        seed: 0
+        weightMultiplier: 0.8
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 0
+      simpleNoiseSettings:
+        numLayers: 4
+        strength: 0.18815485
+        roughness: 4.1021433
+        persistance: 0.5
+        baseRoughness: 1.7911365
+        minValue: 0
+        center: {x: 0, y: 0, z: 0}
+        seed: -42011042
+      rigidNoiseSettings:
+        numLayers: 1
+        strength: 1
+        roughness: 2
+        persistance: 0.5
+        baseRoughness: 1
+        minValue: 0
+        center: {x: 0, y: 0, z: 0}
+        seed: 0
+        weightMultiplier: 0.8
+  - enabled: 1
+    useFirstLayerAsMask: 1
+    noiseSettings:
+      filterType: 1
+      simpleNoiseSettings:
+        numLayers: 1
+        strength: 1
+        roughness: 2
+        persistance: 0.5
+        baseRoughness: 1
+        minValue: 0
+        center: {x: 0, y: 0, z: 0}
+        seed: 0
+      rigidNoiseSettings:
+        numLayers: 3
+        strength: 0.18815485
+        roughness: 4.1021433
+        persistance: 0.41
+        baseRoughness: 1.7911365
+        minValue: 0
+        center: {x: 0, y: 0, z: 0}
+        seed: -42011042
+        weightMultiplier: 0.8

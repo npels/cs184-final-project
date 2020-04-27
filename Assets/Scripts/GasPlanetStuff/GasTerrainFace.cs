@@ -25,6 +25,7 @@ public class GasTerrainFace
     public void ConstructMesh()
     {
         Vector3[] vertices = new Vector3[resolution * resolution];
+        Vector3[] normals = new Vector3[resolution * resolution];
         int[] triangles = new int[(resolution - 1) * (resolution - 1) * 6];
         int triIndex = 0;
 
@@ -37,6 +38,7 @@ public class GasTerrainFace
                 Vector3 pointOnUnitCube = localUp + (percent.x - 0.5f) * 2 * axisA + (percent.y - 0.5f) * 2 * axisB;
                 Vector3 pointOnUnitSphere = pointOnUnitCube.normalized;
                 vertices[i] = shapeGenerator.CalculatePointOnPlanet(pointOnUnitSphere);
+                normals[i] = pointOnUnitSphere;
 
                 if (x != resolution - 1 && y != resolution - 1)
                 {
@@ -54,6 +56,7 @@ public class GasTerrainFace
         mesh.Clear();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
-        mesh.RecalculateNormals();
+        mesh.normals = normals;
+        // mesh.RecalculateNormals();
     }
 }

@@ -45,6 +45,7 @@ public class Planet : MonoBehaviour {
             if (meshFilters[i] == null) {
                 GameObject meshObj = new GameObject("mesh");
                 meshObj.transform.parent = transform;
+                meshObj.transform.localPosition = Vector3.zero;
 
                 meshObj.AddComponent<MeshRenderer>();
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();
@@ -95,5 +96,22 @@ public class Planet : MonoBehaviour {
                 terrainFaces[i].UpdateUVs(colorGenerator);
             }
         }
+    }
+
+    public void changeSeed(int seed) {
+        foreach (ShapeSettings.NoiseLayer nl in shapeSettings.noiseLayers) {
+            switch (nl.noiseSettings.filterType) {
+                case NoiseSettings.FilterType.Simple:
+                    nl.noiseSettings.simpleNoiseSettings.seed = seed;
+                    break;
+                case NoiseSettings.FilterType.Rigid:
+                    nl.noiseSettings.rigidNoiseSettings.seed = seed;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        colorSettings.biomeColorSettings.noise.simpleNoiseSettings.seed = seed;
     }
 }

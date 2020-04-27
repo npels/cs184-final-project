@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GasColor
   m_EditorClassIdentifier: 
   planetMaterial: {fileID: 2100000, guid: f207cf36f56d24540a8b234005a250c3, type: 2}
-  planetColor: {r: 1, g: 0, b: 0, a: 0}
+  planetColor: {r: 1, g: 0, b: 0, a: 1}
