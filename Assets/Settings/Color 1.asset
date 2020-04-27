@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5549293da58bb94cb946c618a387108, type: 3}
-  m_Name: Color
+  m_Name: Color 1
   m_EditorClassIdentifier: 
   planetMaterial: {fileID: 2100000, guid: f207cf36f56d24540a8b234005a250c3, type: 2}
   biomeColorSettings:
@@ -121,7 +121,7 @@ MonoBehaviour:
         baseRoughness: 1
         minValue: 0
         center: {x: 0, y: 0, z: 0}
-        seed: -15309567
+        seed: 0
       rigidNoiseSettings:
         numLayers: 1
         strength: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
         center: {x: 0, y: 0, z: 0}
         seed: 0
         weightMultiplier: 0.8
-    noiseOffset: 0
+    noiseOffset: 0.78
     noiseStrength: 0.2
     blendAmount: 0.58
   oceanColor:

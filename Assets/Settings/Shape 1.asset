@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfbd9cda6a4c96046b37e4e8bf1cf81b, type: 3}
-  m_Name: Shape
+  m_Name: Shape 1
   m_EditorClassIdentifier: 
-  planetRadius: 0.99308026
+  planetRadius: 0.9785714
   noiseLayers:
   - enabled: 1
     useFirstLayerAsMask: 0
@@ -20,13 +20,13 @@ MonoBehaviour:
       filterType: 0
       simpleNoiseSettings:
         numLayers: 6
-        strength: 0.5
-        roughness: 3.3798764
+        strength: 0.1
+        roughness: 2.607143
         persistance: 0.2
-        baseRoughness: 1.6144934
-        minValue: 1
+        baseRoughness: 1.1079047
+        minValue: 0.6142858
         center: {x: 0, y: 0, z: 0}
-        seed: 176091992
+        seed: 13250305
       rigidNoiseSettings:
         numLayers: 1
         strength: 1
@@ -43,13 +43,13 @@ MonoBehaviour:
       filterType: 0
       simpleNoiseSettings:
         numLayers: 4
-        strength: 0.5
-        roughness: 3.3798764
-        persistance: 0.5
-        baseRoughness: 1.6144934
+        strength: 0.35
+        roughness: 4.14
+        persistance: 1.24
+        baseRoughness: 1.23
         minValue: 0
         center: {x: 0, y: 0, z: 0}
-        seed: 176091992
+        seed: 13250305
       rigidNoiseSettings:
         numLayers: 1
         strength: 1
@@ -75,11 +75,11 @@ MonoBehaviour:
         seed: 0
       rigidNoiseSettings:
         numLayers: 3
-        strength: 0.5
-        roughness: 3.3798764
+        strength: 0.1
+        roughness: 2.607143
         persistance: 0.41
-        baseRoughness: 1.6144934
+        baseRoughness: 1.06
         minValue: 0
         center: {x: 0, y: 0, z: 0}
-        seed: 176091992
+        seed: 13250305
         weightMultiplier: 0.8
