@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
-{
+{   
+    #region Singleton
+    public static GameManager Instance;
+    void Awake() {
+        Instance = this;
+    }
+    #endregion 
+
     [SerializeField]
     int planetCount = 100;
     [SerializeField]
@@ -14,7 +21,7 @@ public class GameManager : MonoBehaviour
     GameObject starPrefab;
     
     Star star;
-    Dictionary<string, GameObject> nameToSolarSystemObject; //name to solar system gameobject
+    public Dictionary<string, GameObject> nameToSolarSystemObject; //name to solar system gameobject
 
     // Start is called before the first frame update
     void Start()

@@ -16,6 +16,8 @@ public class UIManager : MonoBehaviour
   [SerializeField]
   Dropdown solarSystemDropdown;
 
+  List<string> camList;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -30,7 +32,14 @@ public class UIManager : MonoBehaviour
 
   public void PopulateDropdown(Dictionary<string, GameObject> nameToSolarSystemObject)
   {
-    solarSystemDropdown.AddOptions(new List<string>(nameToSolarSystemObject.Keys));
+    camList = new List<string>(nameToSolarSystemObject.Keys);
+    camList.Insert(0, "Solar system");
+    solarSystemDropdown.AddOptions(camList);
+  }
+
+  public void SetActiveCameraFromDropdown() {
+    string planetName = solarSystemDropdown.options[solarSystemDropdown.value].text;
+    SSCamManager.Instance.CurrCamTarget = planetName;
   }
 
 }
