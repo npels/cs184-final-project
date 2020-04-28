@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4236,7 +4236,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1441956986}
-        m_MethodName: OnChangeColor
+        m_MethodName: OnRandomizeColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5310,7 +5310,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78475b8fd019a147a12a1270e717820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filepath: Shapes
   planetUI: {fileID: 1441956986}
   items:
   - {fileID: 11400000, guid: d5bda8b554aeec249bc2817e7ee07018, type: 2}
@@ -5764,6 +5763,7 @@ GameObject:
   - component: {fileID: 829307582}
   - component: {fileID: 829307581}
   - component: {fileID: 829307580}
+  - component: {fileID: 829307583}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -5850,9 +5850,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441956986}
-        m_MethodName: OnChangeColor
-        m_Mode: 1
+      - m_Target: {fileID: 829307583}
+        m_MethodName: OnSelectItem
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5897,6 +5897,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829307578}
   m_CullTransparentMesh: 0
+--- !u!114 &829307583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829307578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd39c20dff907743836be76ef2f6b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetUI: {fileID: 1441956986}
+  items:
+  - {fileID: 11400000, guid: af4ae778b4bef2647ae8cd48bce1477f, type: 2}
+  - {fileID: 11400000, guid: 56ea1fc8d776da84ab219e99dc40b178, type: 2}
+  - {fileID: 11400000, guid: a2d46649b80c32440b466d51d292aafc, type: 2}
+  - {fileID: 11400000, guid: ea3ecb6f3cededa409d14c579bb701ff, type: 2}
+  - {fileID: 11400000, guid: 1cc37410c125c184f974a5f0eafdd8bc, type: 2}
 --- !u!1 &872771941
 GameObject:
   m_ObjectHideFlags: 0
@@ -10860,12 +10879,13 @@ MonoBehaviour:
   planetEditor: {fileID: 604457656}
   sceneCamera: {fileID: 963194225}
   seedInput: {fileID: 2109418279}
-  planetTypeDropdown: {fileID: 0}
   sizeSlider: {fileID: 655201851}
   landShapeSlider: {fileID: 729846060}
   roughnessSlider: {fileID: 1023565010}
   heightSlider: {fileID: 1878391130}
   seaLevelSlider: {fileID: 1215975942}
+  shapesDropdown: {fileID: 786614166}
+  colorsDropdown: {fileID: 829307580}
   returnToEditorButton: {fileID: 77685796}
   zoomSlider: {fileID: 1951596750}
 --- !u!1 &1452828842

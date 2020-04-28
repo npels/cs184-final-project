@@ -11,12 +11,14 @@ public class PlanetUI : MonoBehaviour {
     public GameObject sceneCamera;
 
     public TMPro.TMP_InputField seedInput;
-    public Dropdown planetTypeDropdown;
     public Slider sizeSlider;
     public Slider landShapeSlider;
     public Slider roughnessSlider;
     public Slider heightSlider;
     public Slider seaLevelSlider;
+
+    public TMPro.TMP_Dropdown shapesDropdown;
+    public TMPro.TMP_Dropdown colorsDropdown;
 
     public GameObject returnToEditorButton;
     public Slider zoomSlider;
@@ -90,12 +92,11 @@ public class PlanetUI : MonoBehaviour {
         planet.OnColorSettingsUpdated();
     }
 
-    public void OnChangePlanetType() {
-        // TODO
-    }
-
     public void OnRandomizePlanetType() {
-        // TODO
+        ShapesDropdownFolder s = shapesDropdown.transform.GetComponent<ShapesDropdownFolder>();
+        int type = Random.Range(0, s.items.Count);
+        s.OnSelectItem(type);
+        shapesDropdown.value = type;
     }
 
     public void OnChangeSize() {
@@ -241,12 +242,11 @@ public class PlanetUI : MonoBehaviour {
         planet.OnShapeSettingsUpdated();
     }
 
-    public void OnChangeColor() {
-        // TODO
-    }
-
     public void OnRandomizeColor() {
-        // TODO
+        ColorsDropdownFolder s = colorsDropdown.transform.GetComponent<ColorsDropdownFolder>();
+        int type = Random.Range(0, s.items.Count);
+        s.OnSelectItem(type);
+        colorsDropdown.value = type;
     }
 
     public void OnRandomizeEverything() {

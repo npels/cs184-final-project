@@ -4,19 +4,18 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShapesDropdownFolder : MonoBehaviour {
+public class ColorsDropdownFolder : MonoBehaviour {
     public PlanetUI planetUI;
 
-    public List<ShapeSettings> items;
+    public List<ColorSettings> items;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         var dropdown = transform.GetComponent<TMPro.TMP_Dropdown>();
         dropdown.ClearOptions();
 
         List<TMPro.TMP_Dropdown.OptionData> dropdownList = new List<TMPro.TMP_Dropdown.OptionData>();
-        foreach (ShapeSettings s in items) {
+        foreach (ColorSettings s in items) {
             TMPro.TMP_Dropdown.OptionData item = new TMPro.TMP_Dropdown.OptionData(s.name);
             dropdownList.Add(item);
         }
@@ -37,8 +36,7 @@ public class ShapesDropdownFolder : MonoBehaviour {
     }
 
     public void OnSelectItem(int index) {
-        planetUI.planet.shapeSettings = items[index];
-        planetUI.planet.OnShapeSettingsUpdated();
-        planetUI.LoadSettings();
+        planetUI.planet.colorSettings = items[index];
+        planetUI.planet.OnColorSettingsUpdated();
     }
 }
