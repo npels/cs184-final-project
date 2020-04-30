@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14742391304899445ab29c68526e77cf, type: 3}
-  m_Name: GasColor
+  m_Script: {fileID: 11500000, guid: cfbd9cda6a4c96046b37e4e8bf1cf81b, type: 3}
+  m_Name: GasShapeSettings
   m_EditorClassIdentifier: 
-  planetMaterial: {fileID: 2100000, guid: f207cf36f56d24540a8b234005a250c3, type: 2}
-  planetColor: {r: 1, g: 0, b: 0, a: 1}
+  planetRadius: 10
+  noiseLayers: []
