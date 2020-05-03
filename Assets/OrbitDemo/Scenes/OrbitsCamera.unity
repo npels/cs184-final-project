@@ -1055,9 +1055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f532fa5a38b4c3698787cde18e44f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetCount: 100
+  planetCount: 10
   radiusRange: {x: 10, y: 200}
-  planetPrefab: {fileID: 1468556026979993375, guid: b07b07bfe35d4485d937d4804b57f0af,
+  planetPrefab: {fileID: 1468556026979993375, guid: 11d9d57de137b394d91b6ed58245e866,
     type: 3}
   starPrefab: {fileID: 8168753832775810974, guid: aeacace78e9e84123869d9dd932ce90d,
     type: 3}

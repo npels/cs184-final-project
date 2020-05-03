@@ -254,7 +254,6 @@ public class PlanetUI : MonoBehaviour {
         OnRandomizeHeight();
         OnRandomizeLandShape();
         OnRandomizeRoughness();
-        OnRandomizePlanetType();
         OnRandomizeSeaLevel();
         OnRandomizeSeed();
         OnRandomizeSize();
