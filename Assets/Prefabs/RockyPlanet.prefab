@@ -243,8 +243,8 @@ MonoBehaviour:
   resolution: 100
   autoUpdate: 1
   faceRenderMask: 0
-  shapeSettings: {fileID: 11400000, guid: d5bda8b554aeec249bc2817e7ee07018, type: 2}
-  colorSettings: {fileID: 11400000, guid: af4ae778b4bef2647ae8cd48bce1477f, type: 2}
+  shapeSettings: {fileID: 0}
+  colorSettings: {fileID: 0}
   shapeSettingsFoldout: 0
   colorSettingsFoldout: 0
   meshFilters:
@@ -266,20 +266,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 902804c9afe345c4b90506c2fa7b7fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapes:
-  - {fileID: 11400000, guid: d5bda8b554aeec249bc2817e7ee07018, type: 2}
-  - {fileID: 11400000, guid: ba3d8ede330cb34409b13d52100f6ccd, type: 2}
-  - {fileID: 11400000, guid: 030dcdcbd34bead4ca884a6a82625f8d, type: 2}
-  - {fileID: 11400000, guid: 29eef7417fc95fc45ad91fc4d97f0be9, type: 2}
-  - {fileID: 11400000, guid: 4f7d27a0f4f711a4381cf3176af387dd, type: 2}
-  - {fileID: 11400000, guid: b7a20f0e705fbbf40b813ac9dec3e22f, type: 2}
-  - {fileID: 11400000, guid: 0e43be86f4e47394f9ad2b9287fe6408, type: 2}
-  - {fileID: 11400000, guid: cd427a2e04c5feb4dbd858e80a5bf171, type: 2}
-  - {fileID: 11400000, guid: 8cbdf2c27c766d44dbf6e89a803d171b, type: 2}
-  colors:
-  - {fileID: 11400000, guid: af4ae778b4bef2647ae8cd48bce1477f, type: 2}
-  - {fileID: 11400000, guid: 56ea1fc8d776da84ab219e99dc40b178, type: 2}
-  - {fileID: 11400000, guid: a2d46649b80c32440b466d51d292aafc, type: 2}
-  - {fileID: 11400000, guid: ea3ecb6f3cededa409d14c579bb701ff, type: 2}
-  - {fileID: 11400000, guid: 1cc37410c125c184f974a5f0eafdd8bc, type: 2}
+  g: {fileID: 11400000, guid: 2830894bd1c42774b91fbf390ffa048c, type: 2}
   planet: {fileID: 800860869323278763}

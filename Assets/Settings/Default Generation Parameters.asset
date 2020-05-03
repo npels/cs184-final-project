@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a72ad08e0f0a584e83ba1a126c4bde2, type: 3}
+  m_Name: Default Generation Parameters
+  m_EditorClassIdentifier: 
+  minSeed: -2147483648
+  maxSeed: 2147483647
+  minNoiseFilters: 2
+  maxNoiseFilters: 5
+  minRigidNoiseFilters: 0
+  maxRigidNoiseFilters: 3
+  minNoiseLayers: 3
+  maxNoiseLayers: 8
+  planetRadiusMin: 1
+  planetRadiusMax: 1.5
+  baseRoughnessMin: 0.5
+  baseRoughnessMax: 3
+  roughnessMin: 1
+  roughnessMax: 5
+  persistanceMin: 0.05
+  persistanceMax: 0.4
+  strengthMin: 0.05
+  strengthMax: 0.25
+  seaLevelMin: 0
+  seaLevelMax: 1
+  weightMultiplierMin: 0
+  weightMultiplierMax: 5
+  minBiomes: 2
+  maxBiomes: 10
+  minBiomeColors: 3
+  maxBiomeColors: 9
+  minOceanColors: 2
+  maxOceanColors: 9
+  shoreHueMin: 0
+  shoreHueMax: 1
+  shoreSaturationMin: 0
+  shoreSaturationMax: 1
+  shoreValueMin: 0
+  shoreValueMax: 1
+  baseHueMin: 0
+  baseHueMax: 1
+  baseSaturationMin: 0
+  baseSaturationMax: 1
+  baseValueMin: 0.2
+  baseValueMax: 1
+  oceanColorFlux: 0.1
+  oceanSpacingFlux: 0.05
+  intrabiomeColorFlux: 0.1
+  interbiomeColorFlux: 0.1
+  biomeColorSpacingFlux: 0.05
+  biomeLocationFlux: 0.05
+  tintHueMin: 0
+  tintHueMax: 1
+  tintSaturationMin: 0
+  tintSaturationMax: 1
+  tintValueMin: 0
+  tintValueMax: 1
+  tintPercentMin: 0
+  tintPercentMax: 0.15
+  minColorNoiseLayers: 1
+  maxColorNoiseLayers: 5
+  colorBaseRoughnessMin: 0
+  colorBaseRoughnessMax: 5
+  colorRoughnessMin: -1
+  colorRoughnessMax: 1
+  colorPersistanceMin: 0
+  colorPersistanceMax: 1
+  colorStrengthMin: -1
+  colorStrengthMax: 1
+  noiseOffsetMin: 0.5
+  noiseOffsetMax: 0.5
+  noiseStrengthMin: -1
+  noiseStrengthMax: 1
+  blendAmountMin: 0.1
+  blendAmountMax: 0.4
+  planetShader: {fileID: -6465566751694194690, guid: f99078d691e7de349973e863887add8b,
+    type: 3}
