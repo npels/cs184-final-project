@@ -8,12 +8,13 @@ public class PlanetOrbiter : MonoBehaviour
     Material[] planetMaterials;
     [SerializeField]
     Material trailMaterial;
+    float EPS = 0.01f;
 
     Star star;
 
     void Awake() {
         SetRandomPlanetMaterial();
-        SetTrailRenderer();
+        SetRandomTrailColor();
     }
 
     // Update is called once per frame
@@ -34,32 +35,33 @@ public class PlanetOrbiter : MonoBehaviour
     }
 
     void ApplyGravity() {
-        Vector3 distanceVector = this.transform.position - star.transform.position; 
-        float r = distanceVector.magnitude;
+        Vector3 gravityDir = this.transform.position - star.transform.position; 
+        float r = gravityDir.magnitude;
 
-        float totalForce = - star.Mass / (Mathf.Max(0.5f, r*r));
-        Vector3 gravityForce = (distanceVector).normalized * totalForce;
+        float totalForce = - star.Mass / (Mathf.Max(r*r, EPS));
+        Vector3 gravityForce = (gravityDir).normalized * totalForce;
         
         GetComponent<Rigidbody>().AddForce(gravityForce);
     }
 
     void SetInitialOrbitingVelocity() {
-        Vector3 distanceVector = this.transform.position - star.transform.position; 
-        float r = distanceVector.magnitude;
+        Vector3 starDir = this.transform.position - star.transform.position; 
+        float r = starDir.magnitude;
         
-        float v = Mathf.Sqrt(star.Mass / Mathf.Max(r, 1f));
-        Vector3 tangentialDirection = Vector3.Cross(distanceVector, transform.up).normalized;
+        float v = Mathf.Sqrt(star.Mass / Mathf.Max(r, EPS));
+        Vector3 tangentialDirection = Vector3.Cross(starDir, transform.up).normalized;
         
-        GetComponent<Rigidbody>().velocity = v * tangentialDirection;
+        GetComponent<Rigidbody>().velocity = (1.25f) * v * tangentialDirection;
     }
 
-    void SetTrailRenderer() {
-        TrailRenderer tr = GetComponent<TrailRenderer>();
-        tr.time = 1.0f; //extend this to get longer trails
-        tr.startWidth = 0.1f; //width of trail 
-        tr.endWidth = 0;
-        tr.startColor = new Color(1, 1, 0, 0.1f); //yellow hue
-        tr.endColor = new Color(0, 0, 0, 0); //fade out to nothing
+    void SetRandomTrailColor() {
+        Color randomColor = new Color(
+            Random.Range(0f, 1f), 
+            Random.Range(0f, 1f), 
+            Random.Range(0f, 1f)
+        );
+        GetComponent<TrailRenderer>().startColor = randomColor;
+        GetComponent<TrailRenderer>().endColor = randomColor;
     }
 
     void SetRandomPlanetMaterial() {
