@@ -23,8 +23,18 @@ public class PlanetUI : MonoBehaviour {
     public GameObject returnToEditorButton;
     public Slider zoomSlider;
 
+    public ShapeSettings customShape;
+    public ColorSettings customColor;
+
     private void Start() {
-        LoadSettings();
+        // LoadSettings();
+
+        customShape.planetRadius = planet.shapeSettings.planetRadius;
+        customShape.noiseLayers = planet.shapeSettings.noiseLayers;
+
+        customColor.biomeColorSettings = planet.colorSettings.biomeColorSettings;
+        customColor.oceanColor = planet.colorSettings.oceanColor;
+        customColor.planetMaterial = planet.colorSettings.planetMaterial;
     }
 
     public void LoadSettings() {
@@ -250,41 +260,32 @@ public class PlanetUI : MonoBehaviour {
     }
 
     public void OnRandomizeEverything() {
-        OnRandomizeColor();
-        OnRandomizeHeight();
-        OnRandomizeLandShape();
-        OnRandomizeRoughness();
-        OnRandomizeSeaLevel();
-        OnRandomizeSeed();
-        OnRandomizeSize();
-    }
-
-    public void OnAdvancedOptions() {
-        // TODO
-    }
-
-    public void OnPreview() {
-        planetEditor.SetActive(false);
-        returnToEditorButton.SetActive(true);
-        planet.resolution = 256;
-        planet.GeneratePlanet();
-        zoomSlider.value = 1;
-        sceneCamera.GetComponent<Animation>().Play("CameraMoveLeft");
-        sceneCamera.GetComponent<CameraSettings>().originalPosition = new Vector3(0, 0, 3.75f);
+        planet.transform.GetComponent<PlanetRandomizer>().RegenerateShape();
+        planet.transform.GetComponent<PlanetRandomizer>().RegenerateColor();
+        planet.OnShapeSettingsUpdated();
+        planet.OnColorSettingsUpdated();
+        LoadSettings();
     }
 
     public void OnDone() {
-        // TODO
+        planetEditor.SetActive(false);
+        returnToEditorButton.SetActive(true);
+        // planet.resolution = 256;
+        // planet.GeneratePlanet();
+        // zoomSlider.value = 1;
+        // sceneCamera.GetComponent<Animation>().Play("CameraMoveLeft");
+        // sceneCamera.GetComponent<CameraSettings>().originalPosition = new Vector3(0, 0, 3.75f);
     }
 
     public void OnReturnToEditor() {
+        LoadSettings();
         planetEditor.SetActive(true);
         returnToEditorButton.SetActive(false);
-        planet.resolution = 64;
-        planet.GeneratePlanet();
-        zoomSlider.value = 1;
-        sceneCamera.GetComponent<Animation>().Play("CameraMoveRight");
-        sceneCamera.GetComponent<CameraSettings>().originalPosition = new Vector3(1.5f, 0, 3.75f);
+        // planet.resolution = 64;
+        // planet.GeneratePlanet();
+        // zoomSlider.value = 1;
+        // sceneCamera.GetComponent<Animation>().Play("CameraMoveRight");
+        // sceneCamera.GetComponent<CameraSettings>().originalPosition = new Vector3(1.5f, 0, 3.75f);
     }
 
     public void OnZoom() {

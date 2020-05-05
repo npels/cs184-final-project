@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
             GameObject planet = GameObject.Instantiate(planetPrefab);
             PlanetOrbiter planetOrbiter = planet.GetComponent<PlanetOrbiter>();
             planet.transform.position = GetRandomPositionAroundStar(star);
-            planet.transform.localScale *= Random.Range(0.04f, 0.08f);
+            planet.transform.localScale *= Random.Range(0.4f, 0.8f);
             planetOrbiter.SetStar(star);
 
             nameToSolarSystemObject["Planet " + (i+1)] = planet;
