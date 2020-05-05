@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Vector2 radiusRange = new Vector2(10, 200);
     [SerializeField]
+    Vector2 planetSizeRange = new Vector2(0.5f, 1f);
+    [SerializeField]
     GameObject planetPrefab;
     [SerializeField]
     GameObject starPrefab;
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour
             GameObject planet = GameObject.Instantiate(planetPrefab);
             PlanetOrbiter planetOrbiter = planet.GetComponent<PlanetOrbiter>();
             planet.transform.position = GetRandomPositionAroundStar(star);
-            //planet.transform.localScale *= Random.Range(0.04f, 0.08f);
+            planet.transform.localScale *= Random.Range(planetSizeRange.x, planetSizeRange.y);
             planetOrbiter.SetStar(star);
 
             nameToSolarSystemObject["Planet " + (i+1)] = planet;
