@@ -32,7 +32,15 @@ public class SSCamManager : MonoBehaviour
                 GameObject newTarget = GameManager.Instance.nameToSolarSystemObject[newCamTarget];
                 planetCam.LookAt = newTarget.transform;
                 planetCam.Follow = newTarget.transform;
+                if (newCamTarget.Contains("Planet")) {
+                  newTarget.GetComponent<TrailRenderer>().enabled = false;
+                }
             } 
+
+            if (prevCamTarget.Contains("Planet")) {
+              GameObject oldTarget = GameManager.Instance.nameToSolarSystemObject[prevCamTarget];
+              oldTarget.GetComponent<TrailRenderer>().enabled = true;
+            }
             planetCam.Priority = newCamPriority;
             planetCam.gameObject.SetActive(camShouldBeActive);
 
