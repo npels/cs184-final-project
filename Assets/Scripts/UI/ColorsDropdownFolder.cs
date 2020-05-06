@@ -20,18 +20,6 @@ public class ColorsDropdownFolder : MonoBehaviour {
             dropdownList.Add(item);
         }
 
-        /*
-        DirectoryInfo dir = new DirectoryInfo("Assets/Resources/" + filepath);
-        FileInfo[] info = dir.GetFiles("*.asset");
-        foreach (FileInfo f in info) {
-            string objpath = filepath + "/" + f.Name;
-            ShapeSettings obj = Resources.Load<ShapeSettings>(objpath);
-            TMPro.TMP_Dropdown.OptionData item = new TMPro.TMP_Dropdown.OptionData(f.Name.Replace(".asset", ""));
-            dropdownList.Add(item);
-            items.Add(obj);
-        }
-        */
-
         dropdown.AddOptions(dropdownList);
     }
 
