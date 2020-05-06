@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     GameObject planetPrefab;
     [SerializeField]
     GameObject starPrefab;
+    [SerializeField]
+    GameObject gasPlanetPrefab;
     
     Star star;
     public Dictionary<string, GameObject> nameToSolarSystemObject; //name to solar system gameobject
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
         nameToSolarSystemObject["Star"] = star.gameObject;
 
         CreatePlanetsAroundStar(star);
+        CreateGasPlanetAroundStar(star);
 
         UIManager.Instance.PopulateDropdown(nameToSolarSystemObject);
     }
@@ -45,6 +48,20 @@ public class GameManager : MonoBehaviour
             planetOrbiter.SetStar(star);
 
             nameToSolarSystemObject["Planet " + (i+1)] = planet;
+        }
+    }
+
+    void CreateGasPlanetAroundStar(Star star)
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            GameObject planet = GameObject.Instantiate(gasPlanetPrefab);
+            PlanetOrbiter planetOrbiter = planet.GetComponent<PlanetOrbiter>();
+            planet.transform.position = GetRandomPositionAroundStar(star);
+            planet.transform.localScale *= Random.Range(0.04f, 0.08f);
+            planetOrbiter.SetStar(star);
+
+            nameToSolarSystemObject["Gas Planet " + (i + 1)] = planet;
         }
     }
 

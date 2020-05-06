@@ -7,6 +7,7 @@ public class ColorSettings : ScriptableObject {
 
     public Material planetMaterial;
     public BiomeColorSettings biomeColorSettings;
+    public GasStripeColorSettings stripeColorSettings;
     public Gradient oceanColor;
 
     [System.Serializable]
@@ -26,6 +27,23 @@ public class ColorSettings : ScriptableObject {
             public float tintPercent;
             [Range(0, 1)]
             public float startHeight;
+        }
+    }
+
+    [System.Serializable]
+    public class GasStripeColorSettings
+    {
+        public Stripe[] stripes;
+
+        [System.Serializable]
+        public class Stripe
+        {
+            public Gradient gradient;
+            public Color tint;
+            [Range(0, 1)]
+            public float startHeight;
+            [Range(0, 1)]
+            public float tintPercent;
         }
     }
 }

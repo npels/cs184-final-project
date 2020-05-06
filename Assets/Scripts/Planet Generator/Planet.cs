@@ -21,6 +21,7 @@ public class Planet : MonoBehaviour {
 
     ShapeGenerator shapeGenerator = new ShapeGenerator();
     ColorGenerator colorGenerator = new ColorGenerator();
+    //GasStripeGenerator stripeGenerator = new GasStripeGenerator();
 
     [SerializeField, HideInInspector]
     MeshFilter[] meshFilters;
@@ -91,8 +92,11 @@ public class Planet : MonoBehaviour {
 
     void GenerateColors() {
         colorGenerator.UpdateColors();
-        for (int i = 0; i < 6; i++) {
-            if (meshFilters[i].gameObject.activeSelf) {
+
+        for (int i = 0; i < 6; i++)
+        {
+            if (meshFilters[i].gameObject.activeSelf)
+            {
                 terrainFaces[i].UpdateUVs(colorGenerator);
             }
         }

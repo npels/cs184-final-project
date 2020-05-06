@@ -9,6 +9,7 @@ public class GasRings : MonoBehaviour
     public float innerRadius;
     public float outerRadius;
     public Material ringMat;
+    public Color ringColor;
 
     GameObject rings;
     Mesh ringMesh;
@@ -28,8 +29,10 @@ public class GasRings : MonoBehaviour
         ringMeshFilter = rings.AddComponent<MeshFilter>();
         ringMesh = ringMeshFilter.mesh;
         ringMeshRenderer = rings.AddComponent<MeshRenderer>();
+        ringColor.a = 1;
+        ringMat.SetColor("_BaseColor", ringColor);
         ringMeshRenderer.material = ringMat;
-
+        
         Vector3[] vertices = new Vector3[(segments + 1) * 4];
         int[] triangles = new int[segments * 12];
         Vector2[] uv = new Vector2[(segments + 1) * 4];

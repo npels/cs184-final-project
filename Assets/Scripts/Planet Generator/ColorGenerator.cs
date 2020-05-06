@@ -59,4 +59,43 @@ public class ColorGenerator {
         texture.Apply();
         settings.planetMaterial.SetTexture("_texture", texture);
     }
+
+    public void UpdateStripes()
+    {
+        Color[] colors = new Color[texture.width * texture.height];
+        int colorIndex = 0;
+        foreach (var stripe in settings.stripeColorSettings.stripes)
+        {
+            for (int i = 0; i < textureResolution * 2; i++)
+            {
+                Color gradientCol = stripe.gradient.Evaluate(i / (textureResolution - 1f));
+                Color tintCol = stripe.tint;
+                colors[colorIndex] = gradientCol * (1 - stripe.tintPercent) + tintCol * stripe.tintPercent;
+                colorIndex++;
+            }
+        }
+        texture.SetPixels(colors);
+        texture.Apply();
+        settings.planetMaterial.SetTexture("_texture", texture);
+    }
+
+    public float StripePercentFromPoint(Vector3 pointOnUnitSphere)
+    {
+        float heightPercent = (pointOnUnitSphere.y + 1) / 2f;
+        float stripeIndex = 0;
+        int numStripes = settings.stripeColorSettings.stripes.Length;
+
+        for (int i = 0; i < numStripes; i++)
+        {
+            if (settings.stripeColorSettings.stripes[i].startHeight < heightPercent)
+            {
+                stripeIndex = i;
+            }
+            else
+            {
+                break;
+            }
+        }
+        return stripeIndex / Mathf.Max(1, numStripes - 1);
+    }
 }
