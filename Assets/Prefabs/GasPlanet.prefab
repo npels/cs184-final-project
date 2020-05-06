@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: -2578603562768815917}
   - component: {fileID: 8205510467388433599}
   - component: {fileID: 8205510467388433598}
+  - component: {fileID: -7132107632054158674}
   m_Layer: 0
   m_Name: GasPlanet
   m_TagString: Untagged
@@ -307,7 +308,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d03e32777b7d23641aef96401b22dd6b, type: 2}
+  - {fileID: 2100000, guid: 3f2c7032c7c7e984ba117aa26b6c1969, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -482,8 +483,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolution: 116
   autoUpdate: 1
-  shapeSettings: {fileID: 11400000, guid: 03ab6c332c725984393fb44a56b17a4a, type: 2}
-  colorSettings: {fileID: 11400000, guid: 0d42d75edb5be7c4f9cfbbf2af58c49f, type: 2}
+  faceRenderMask: 0
+  shapeSettings: {fileID: 0}
+  colorSettings: {fileID: 0}
   shapeSettingsFoldout: 1
   colorSettingsFoldout: 1
   meshFilters:
@@ -506,10 +508,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segments: 67
-  innerRadius: 2
-  outerRadius: 3
+  innerRadius: 1.2
+  outerRadius: 1.7
   ringMat: {fileID: 2100000, guid: c5e21e1bc62a31d458738a7e7cb472bd, type: 2}
   ringColor: {r: 1, g: 0.54929036, b: 0, a: 0}
+--- !u!114 &-7132107632054158674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205510467388433593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c073027d4f8b2714b961ce7401cfb1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planet: {fileID: 8205510467388433599}
+  material: {fileID: 2100000, guid: 3f2c7032c7c7e984ba117aa26b6c1969, type: 2}
 --- !u!1 &8205510468194573743
 GameObject:
   m_ObjectHideFlags: 0

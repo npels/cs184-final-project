@@ -8,6 +8,9 @@ public class GasPlanet : MonoBehaviour
     public int resolution = 10;
     public bool autoUpdate = true;
 
+    public enum FaceRenderMask { All, Top, Bottom, Left, Right, Front, Back }
+    public FaceRenderMask faceRenderMask;
+
     public GasShapeSettings shapeSettings;
     public GasColorSettings colorSettings;
 
@@ -54,6 +57,8 @@ public class GasPlanet : MonoBehaviour
             }
             meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colorSettings.planetMaterial;
             terrainFaces[i] = new GasTerrainFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
+            bool renderFace = faceRenderMask == FaceRenderMask.All || (int)faceRenderMask - 1 == i;
+            meshFilters[i].gameObject.SetActive(renderFace);
         }
     }
 

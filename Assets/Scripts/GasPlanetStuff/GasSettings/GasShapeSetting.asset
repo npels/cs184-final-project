@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7591712e0ad47c348b4873212b03c1a8, type: 3}
   m_Name: GasShapeSetting
   m_EditorClassIdentifier: 
-  planetRadius: 50
+  planetRadius: 10
