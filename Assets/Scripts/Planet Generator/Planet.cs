@@ -46,6 +46,7 @@ public class Planet : MonoBehaviour {
                 GameObject meshObj = new GameObject("mesh");
                 meshObj.transform.parent = transform;
                 meshObj.transform.localPosition = Vector3.zero;
+                meshObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
                 meshObj.AddComponent<MeshRenderer>();
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();

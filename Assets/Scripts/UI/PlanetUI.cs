@@ -270,6 +270,8 @@ public class PlanetUI : MonoBehaviour {
     public void OnDone() {
         planetEditor.SetActive(false);
         returnToEditorButton.SetActive(true);
+        UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects()[3].transform.Find("Dropdown").gameObject.SetActive(true);
+        //planet.transform.parent.Find("Canvas").Find("Dropdown").gameObject.SetActive(true);
         // planet.resolution = 256;
         // planet.GeneratePlanet();
         // zoomSlider.value = 1;
@@ -281,6 +283,8 @@ public class PlanetUI : MonoBehaviour {
         LoadSettings();
         planetEditor.SetActive(true);
         returnToEditorButton.SetActive(false);
+        UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects()[3].transform.Find("Dropdown").gameObject.SetActive(false);
+        //planet.transform.parent.Find("Canvas").Find("Dropdown").gameObject.SetActive(false);
         // planet.resolution = 64;
         // planet.GeneratePlanet();
         // zoomSlider.value = 1;
