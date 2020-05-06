@@ -6,11 +6,9 @@ public class PlanetOrbiter : MonoBehaviour
 {
     [SerializeField]
     Material[] planetMaterials;
-    [SerializeField]
-    Material trailMaterial;
-    float EPS = 0.01f;
+    protected float EPS = 0.01f;
 
-    Star star;
+    protected Star star;
 
     void Awake() {
         SetRandomPlanetMaterial();
@@ -44,7 +42,7 @@ public class PlanetOrbiter : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(gravityForce);
     }
 
-    void SetInitialOrbitingVelocity() {
+    protected virtual void SetInitialOrbitingVelocity() {
         Vector3 starDir = this.transform.position - star.transform.position; 
         float r = starDir.magnitude;
         
