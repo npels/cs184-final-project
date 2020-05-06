@@ -14,17 +14,14 @@ public class PlanetOrbiterVerlet : PlanetOrbiter
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (star == null) {
             return;
         }
 
-        verletUpdate(Time.deltaTime);
-    }
-
-    void FixedUpdate() {
-        return;
+        //verletUpdate(Time.deltaTime);
+        huenUpdate(Time.deltaTime);
     }
 
     protected override void SetInitialOrbitingVelocity() {
@@ -45,6 +42,17 @@ public class PlanetOrbiterVerlet : PlanetOrbiter
         this.transform.position = newPos;
         this.velocity = newVel;
         this.acc = newAcc;
+    }
+
+    void huenUpdate(float dt) {
+        Vector3 newAcc = applyGravity(); 
+        Vector3 vel_E = velocity + (dt * 0.5f * (acc + newAcc));
+        Vector3 newPos = this.transform.position + (dt * 0.5f * (velocity + vel_E));
+        Vector3 newVel = velocity + (dt * 0.5f * (acc + newAcc));
+
+        this.transform.position = newPos;
+        velocity = newVel;
+        acc = newAcc;
     }
 
     Vector3 applyGravity() {
