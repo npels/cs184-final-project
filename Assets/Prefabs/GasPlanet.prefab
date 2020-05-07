@@ -1940,10 +1940,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segments: 67
-  innerRadius: 12
-  outerRadius: 17
+  innerRadius: 10.5
+  outerRadius: 15
   ringMat: {fileID: 2100000, guid: c5e21e1bc62a31d458738a7e7cb472bd, type: 2}
-  ringColor: {r: 1, g: 0.54929036, b: 0, a: 0}
+  ringColor: {r: 0.8396226, g: 0, b: 0.0719661, a: 0}
 --- !u!1 &1737172024059141678
 GameObject:
   m_ObjectHideFlags: 0

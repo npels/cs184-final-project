@@ -25,7 +25,7 @@ public class GasRings : MonoBehaviour
         int xDegree = Random.Range(0, 180);
         int yDegree = Random.Range(0, 180);
         int zDegree = Random.Range(0, 180);
-        rings.transform.localRotation = Quaternion.identity; //change to different angles
+        rings.transform.localRotation = Quaternion.Euler(-30, -30, 30); //identity; //change to different angles
         ringMeshFilter = rings.AddComponent<MeshFilter>();
         ringMesh = ringMeshFilter.mesh;
         ringMeshRenderer = rings.AddComponent<MeshRenderer>();
