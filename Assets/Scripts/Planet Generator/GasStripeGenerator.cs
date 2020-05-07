@@ -13,6 +13,6 @@ public class GasStripeGenerator
 
     public void UpdateSettings(ColorSettings settings)
     {
-        this.colorSettings = colorSettings;
+        this.colorSettings = settings;
     }
 }

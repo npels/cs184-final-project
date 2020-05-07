@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GasTerrainFace : MonoBehaviour
-{
+public class GasTerrainFace {
     GasShapeGenerator shapeGenerator;
     Mesh mesh;
     int resolution;

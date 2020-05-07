@@ -293,6 +293,6 @@ public class PlanetUI : MonoBehaviour {
     }
 
     public void OnZoom() {
-        sceneCamera.transform.position = sceneCamera.GetComponent<CameraSettings>().originalPosition * zoomSlider.value;
+        // sceneCamera.transform.position = sceneCamera.GetComponent<CameraSettings>().originalPosition * zoomSlider.value;
     }
 }

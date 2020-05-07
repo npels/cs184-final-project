@@ -63,7 +63,7 @@ public class PlanetOrbiter : MonoBehaviour
     }
 
     void SetRandomPlanetMaterial() {
-        GetComponent<Renderer>().material = planetMaterials[Random.Range(0, planetMaterials.Length)];
+        // GetComponent<Renderer>().material = planetMaterials[Random.Range(0, planetMaterials.Length)];
     }
 
 }
