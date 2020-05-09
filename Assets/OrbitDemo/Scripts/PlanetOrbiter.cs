@@ -8,11 +8,16 @@ public class PlanetOrbiter : MonoBehaviour
     Material[] planetMaterials;
     protected float EPS = 0.01f;
 
-    protected Star star;
+    public Star star;
+    public bool isCinemaShot;
 
     void Awake() {
         SetRandomPlanetMaterial();
         SetRandomTrailColor();
+
+        if (isCinemaShot) {
+            SetInitialOrbitingVelocity();
+        }
     }
 
     // Update is called once per frame
@@ -49,7 +54,7 @@ public class PlanetOrbiter : MonoBehaviour
         float v = Mathf.Sqrt(star.Mass / Mathf.Max(r, EPS));
         Vector3 tangentialDirection = Vector3.Cross(starDir, transform.up).normalized;
         
-        GetComponent<Rigidbody>().velocity = (1.25f) * v * tangentialDirection;
+        GetComponent<Rigidbody>().velocity = v * tangentialDirection;
     }
 
     void SetRandomTrailColor() {
