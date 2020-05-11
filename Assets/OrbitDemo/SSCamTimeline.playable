@@ -193,8 +193,11 @@ AnimationClip:
       value: {fileID: 0}
     - time: 12.416667
       value: {fileID: 0}
+<<<<<<< HEAD
     - time: 12.433333
       value: {fileID: 0}
+=======
+>>>>>>> parent of 40bab64... Made some changes for live demo
     - time: 17.616667
       value: {fileID: 0}
     - time: 24.4
@@ -222,7 +225,6 @@ AnimationClip:
       value: {fileID: 0}
     - time: 10.266666
       value: {fileID: 0}
-
     - time: 12.416667
       value: {fileID: 0}
     - time: 12.433333
@@ -409,26 +411,3 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
---- !u!114 &6915737368406272727
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e0374501f39d54eb30235764636e0e, type: 3}
-  m_Name: Control Track
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips: []
-  m_Markers:
-    m_Objects: []

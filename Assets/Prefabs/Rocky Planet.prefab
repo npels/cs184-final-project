@@ -1675,7 +1675,6 @@ GameObject:
   - component: {fileID: 8474402862443494232}
   - component: {fileID: 8905661942825868090}
   - component: {fileID: 705565909336622166}
-  - component: {fileID: 5152938363689782599}
   m_Layer: 0
   m_Name: Rocky Planet
   m_TagString: Untagged
@@ -1774,6 +1773,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9e9ac11d303dc4ddc99c5663158e99e3, type: 2}
   - {fileID: 2100000, guid: c6722fbf2d61143fc80c217002aea7dd, type: 2}
   - {fileID: 2100000, guid: 50d50f1fd49e04382a2a24fffd13b8c1, type: 2}
+  trailMaterial: {fileID: 2100000, guid: 0907575e1919c43999cae4125c7a707b, type: 2}
 --- !u!54 &7187574677929242441
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1921,19 +1921,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   g: {fileID: 11400000, guid: 2830894bd1c42774b91fbf390ffa048c, type: 2}
   planet: {fileID: 8905661942825868090}
---- !u!114 &5152938363689782599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468556026979993375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 191f45955573038468b22fc0cf6d4c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  degreesPerSecond: 10
 --- !u!1 &1737172024059141678
 GameObject:
   m_ObjectHideFlags: 0
