@@ -193,11 +193,8 @@ AnimationClip:
       value: {fileID: 0}
     - time: 12.416667
       value: {fileID: 0}
-<<<<<<< HEAD
     - time: 12.433333
       value: {fileID: 0}
-=======
->>>>>>> parent of 40bab64... Made some changes for live demo
     - time: 17.616667
       value: {fileID: 0}
     - time: 24.4
