@@ -1673,11 +1673,12 @@ GameObject:
   - component: {fileID: 6496347268317443893}
   - component: {fileID: 7187574677929242441}
   - component: {fileID: 8474402862443494232}
-  - component: {fileID: 8905661942825868090}
-  - component: {fileID: 705565909336622166}
-  - component: {fileID: 5152938363689782599}
+  - component: {fileID: 7646477868511451102}
+  - component: {fileID: 494511547221995728}
+  - component: {fileID: 765058407650841981}
+  - component: {fileID: 7789053909063894374}
   m_Layer: 0
-  m_Name: Rocky Planet
+  m_Name: GasPlanet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1887,7 +1888,7 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &8905661942825868090
+--- !u!114 &7646477868511451102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1896,7 +1897,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1468556026979993375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa7c73573bae8d4b82b6b5df3ee5df3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4076f3cf49aba3c4698fcd90ebe01ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resolution: 128
@@ -1906,8 +1907,14 @@ MonoBehaviour:
   colorSettings: {fileID: 0}
   shapeSettingsFoldout: 0
   colorSettingsFoldout: 0
-  meshFilters: []
---- !u!114 &705565909336622166
+  meshFilters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &494511547221995728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1916,12 +1923,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1468556026979993375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 902804c9afe345c4b90506c2fa7b7fe7, type: 3}
+  m_Script: {fileID: 11500000, guid: c073027d4f8b2714b961ce7401cfb1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: {fileID: 11400000, guid: 2830894bd1c42774b91fbf390ffa048c, type: 2}
-  planet: {fileID: 8905661942825868090}
---- !u!114 &5152938363689782599
+  planet: {fileID: 7646477868511451102}
+  material: {fileID: 2100000, guid: 3f2c7032c7c7e984ba117aa26b6c1969, type: 2}
+--- !u!114 &765058407650841981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468556026979993375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559c0aface630404e8943c3aa46eeb11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segments: 67
+  innerRadius: 12
+  outerRadius: 17
+  ringMat: {fileID: 2100000, guid: c5e21e1bc62a31d458738a7e7cb472bd, type: 2}
+  ringColor: {r: 1, g: 0.54929036, b: 0, a: 0}
+--- !u!114 &7789053909063894374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9451,7 +9475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1790f92e4e9f164fb55f60bbe0827dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planet: {fileID: 8905661942825868090}
+  planet: {fileID: 0}
   planetEditor: {fileID: 2564752346850089458}
   sceneCamera: {fileID: 0}
   seedInput: {fileID: 2406117577840225666}
