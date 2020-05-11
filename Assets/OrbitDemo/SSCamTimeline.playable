@@ -193,6 +193,8 @@ AnimationClip:
       value: {fileID: 0}
     - time: 12.416667
       value: {fileID: 0}
+    - time: 12.433333
+      value: {fileID: 0}
     - time: 17.616667
       value: {fileID: 0}
     - time: 24.4
@@ -221,6 +223,8 @@ AnimationClip:
     - time: 10.266666
       value: {fileID: 0}
     - time: 12.416667
+      value: {fileID: 0}
+    - time: 12.433333
       value: {fileID: 0}
     - time: 17.616667
       value: {fileID: 0}
@@ -271,6 +275,8 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
