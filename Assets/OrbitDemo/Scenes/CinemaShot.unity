@@ -519,7 +519,7 @@ MonoBehaviour:
     roll: 0
   - position: {x: -53, y: 0.2, z: -48}
     roll: 0
-  - position: {x: -50, y: 10, z: -10}
+  - position: {x: -94.6, y: -6.07, z: -9.27}
     roll: 0
   - position: {x: -55, y: 8.5, z: 20}
     roll: 0
@@ -600,8 +600,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679685310}
-  m_LocalRotation: {x: -0.18379448, y: -0.6983102, z: 0.19321375, w: -0.66426724}
-  m_LocalPosition: {x: -200, y: 120, z: 10}
+  m_LocalRotation: {x: 0.054636057, y: -0.9144152, z: 0.13190314, w: 0.37876296}
+  m_LocalPosition: {x: 120, y: 50, z: 120}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 393719332}
@@ -1049,8 +1049,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399779183}
-  m_LocalRotation: {x: -0.18379448, y: -0.6983102, z: 0.19321375, w: -0.66426724}
-  m_LocalPosition: {x: -200, y: 120, z: 10}
+  m_LocalRotation: {x: 0.054636057, y: -0.9144152, z: 0.13190314, w: 0.37876296}
+  m_LocalPosition: {x: 120, y: 50, z: 120}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1984124333}
