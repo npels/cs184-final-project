@@ -30,8 +30,9 @@ public class GasRings : MonoBehaviour
         ringMesh = ringMeshFilter.mesh;
         ringMeshRenderer = rings.AddComponent<MeshRenderer>();
         ringColor.a = 1;
-        ringMat.SetColor("_BaseColor", ringColor);
+        // ringMat.SetColor("_BaseColor", ringColor);
         ringMeshRenderer.material = ringMat;
+        ringMeshRenderer.material.SetColor("_BaseColor", ringColor);
         
         Vector3[] vertices = new Vector3[(segments + 1) * 4];
         int[] triangles = new int[segments * 12];

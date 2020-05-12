@@ -191,7 +191,7 @@ AnimationClip:
       value: {fileID: 0}
     - time: 10.266666
       value: {fileID: 0}
-    - time: 12.416667
+    - time: 11.533334
       value: {fileID: 0}
     - time: 12.433333
       value: {fileID: 0}
@@ -209,7 +209,7 @@ AnimationClip:
       value: {fileID: 0}
     - time: 34.116665
       value: {fileID: 0}
-    - time: 43.366665
+    - time: 42.283333
       value: {fileID: 0}
     attribute: m_Follow
     path: 
@@ -222,7 +222,7 @@ AnimationClip:
       value: {fileID: 0}
     - time: 10.266666
       value: {fileID: 0}
-    - time: 12.416667
+    - time: 11.533334
       value: {fileID: 0}
     - time: 12.433333
       value: {fileID: 0}
@@ -230,17 +230,15 @@ AnimationClip:
       value: {fileID: 0}
     - time: 24.4
       value: {fileID: 0}
-    - time: 27.25
-      value: {fileID: 0}
-    - time: 27.283333
-      value: {fileID: 0}
     - time: 29.933332
       value: {fileID: 0}
     - time: 31.35
       value: {fileID: 0}
     - time: 34.116665
       value: {fileID: 0}
-    - time: 43.366665
+    - time: 38.333332
+      value: {fileID: 0}
+    - time: 42.283333
       value: {fileID: 0}
     attribute: m_LookAt
     path: 
@@ -275,7 +273,6 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}

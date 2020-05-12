@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a72ad08e0f0a584e83ba1a126c4bde2, type: 3}
+  m_Name: Gas Generation Parameters
+  m_EditorClassIdentifier: 
+  minSeed: 0
+  maxSeed: 0
+  minNoiseFilters: 1
+  maxNoiseFilters: 1
+  minRigidNoiseFilters: 1
+  maxRigidNoiseFilters: 1
+  minNoiseLayers: 1
+  maxNoiseLayers: 1
+  planetRadiusMin: 1
+  planetRadiusMax: 1.5
+  baseRoughnessMin: 0
+  baseRoughnessMax: 0
+  roughnessMin: 0
+  roughnessMax: 0
+  persistanceMin: 0
+  persistanceMax: 0
+  strengthMin: 0
+  strengthMax: 0
+  seaLevelMin: 0
+  seaLevelMax: 0
+  weightMultiplierMin: 0
+  weightMultiplierMax: 0
+  minBiomes: 1
+  maxBiomes: 20
+  minBiomeColors: 2
+  maxBiomeColors: 2
+  minOceanColors: 2
+  maxOceanColors: 2
+  shoreHueMin: 0
+  shoreHueMax: 1
+  shoreSaturationMin: 0.2
+  shoreSaturationMax: 1
+  shoreValueMin: 0
+  shoreValueMax: 0.3
+  baseHueMin: 0
+  baseHueMax: 1
+  baseSaturationMin: 0.5
+  baseSaturationMax: 1
+  baseValueMin: 0
+  baseValueMax: 0.3
+  oceanColorFlux: 0
+  oceanSpacingFlux: 0
+  intrabiomeColorFlux: 0
+  interbiomeColorFlux: 0.1
+  biomeColorSpacingFlux: 0.1
+  biomeLocationFlux: 0.1
+  tintHueMin: 0
+  tintHueMax: 0
+  tintSaturationMin: 0
+  tintSaturationMax: 0
+  tintValueMin: 0
+  tintValueMax: 0
+  tintPercentMin: 0
+  tintPercentMax: 0
+  minColorNoiseLayers: 1
+  maxColorNoiseLayers: 1
+  colorBaseRoughnessMin: 0
+  colorBaseRoughnessMax: 3
+  colorRoughnessMin: -1
+  colorRoughnessMax: 1
+  colorPersistanceMin: 0
+  colorPersistanceMax: 1
+  colorStrengthMin: -1
+  colorStrengthMax: 1
+  noiseOffsetMin: 0.5
+  noiseOffsetMax: 0.5
+  noiseStrengthMin: -1
+  noiseStrengthMax: 1
+  blendAmountMin: 0.1
+  blendAmountMax: 0.2
+  planetShader: {fileID: -6465566751694194690, guid: 44c538a65e088d349a62bc8de7feefbb,
+    type: 3}

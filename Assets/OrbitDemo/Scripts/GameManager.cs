@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             GameObject planet = GameObject.Instantiate(gasPlanetPrefab);
             PlanetOrbiter planetOrbiter = planet.GetComponent<PlanetOrbiter>();
             planet.transform.position = GetRandomPositionAroundStar(star);
-            planet.transform.localScale *= Random.Range(0.04f, 0.08f);
+            // planet.transform.localScale *= Random.Range(0.04f, 0.08f);
             planetOrbiter.SetStar(star);
 
             nameToSolarSystemObject["Gas Planet " + (i + 1)] = planet;

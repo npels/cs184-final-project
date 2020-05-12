@@ -116,20 +116,22 @@ public class PlanetRandomizer : MonoBehaviour {
             Color biomeBaseColor = new Color(red, green, blue);
 
             gradientColorKeys[0] = new GradientColorKey(shoreColor, 0f);
-            gradientColorKeys[1] = new GradientColorKey(biomeBaseColor, Mathf.Clamp(biomeColorSpacing + Random.Range(-g.biomeColorSpacingFlux, g.biomeColorSpacingFlux), 0f, 1f));
+            if (numBiomeColors > 1) {
+                gradientColorKeys[1] = new GradientColorKey(biomeBaseColor, Mathf.Clamp(biomeColorSpacing + Random.Range(-g.biomeColorSpacingFlux, g.biomeColorSpacingFlux), 0f, 1f));
 
-            red = Mathf.Clamp(biomeBaseColor.r + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
-            green = Mathf.Clamp(biomeBaseColor.g + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
-            blue = Mathf.Clamp(biomeBaseColor.b + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
-            Color nextColor = new Color(red, green, blue);
+                red = Mathf.Clamp(biomeBaseColor.r + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
+                green = Mathf.Clamp(biomeBaseColor.g + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
+                blue = Mathf.Clamp(biomeBaseColor.b + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
+                Color nextColor = new Color(red, green, blue);
 
-            for (int j = 2; j < numBiomeColors; j++) {
-                gradientColorKeys[j] = new GradientColorKey(nextColor, Mathf.Clamp(j * biomeColorSpacing + Random.Range(-g.biomeColorSpacingFlux, g.biomeColorSpacingFlux), 0f, 1f));
+                for (int j = 2; j < numBiomeColors; j++) {
+                    gradientColorKeys[j] = new GradientColorKey(nextColor, Mathf.Clamp(j * biomeColorSpacing + Random.Range(-g.biomeColorSpacingFlux, g.biomeColorSpacingFlux), 0f, 1f));
 
-                red = Mathf.Clamp(nextColor.r + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
-                green = Mathf.Clamp(nextColor.g + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
-                blue = Mathf.Clamp(nextColor.b + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
-                nextColor = new Color(red, green, blue);
+                    red = Mathf.Clamp(nextColor.r + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
+                    green = Mathf.Clamp(nextColor.g + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
+                    blue = Mathf.Clamp(nextColor.b + Random.Range(-g.intrabiomeColorFlux, g.intrabiomeColorFlux), 0f, 1f);
+                    nextColor = new Color(red, green, blue);
+                }
             }
 
             GradientAlphaKey[] gradientAlphaKeys = { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f) };

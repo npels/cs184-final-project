@@ -1773,7 +1773,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9e9ac11d303dc4ddc99c5663158e99e3, type: 2}
   - {fileID: 2100000, guid: c6722fbf2d61143fc80c217002aea7dd, type: 2}
   - {fileID: 2100000, guid: 50d50f1fd49e04382a2a24fffd13b8c1, type: 2}
-  trailMaterial: {fileID: 2100000, guid: 0907575e1919c43999cae4125c7a707b, type: 2}
+  star: {fileID: 0}
+  isCinemaShot: 0
 --- !u!54 &7187574677929242441
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1839,7 +1840,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
