@@ -44,7 +44,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.11821413, b: 1, a: 0}
+      tint: {r: 0.116144516, g: 0.8207547, b: 0.6721697, a: 0}
       tintPercent: 1
       startHeight: 0
     - gradient:
@@ -76,7 +76,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.5533986, b: 1, a: 0}
+      tint: {r: 0.13510147, g: 0.6509434, b: 0.39911494, a: 0}
       tintPercent: 1
       startHeight: 0.06
     - gradient:
@@ -108,7 +108,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.11764706, b: 1, a: 0}
+      tint: {r: 0.11764706, g: 0.8235294, b: 0.6745098, a: 0}
       tintPercent: 1
       startHeight: 0.12
     - gradient:
@@ -140,7 +140,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.092119955, b: 0.7830189, a: 0}
+      tint: {r: 0.5849056, g: 1, b: 0.8886074, a: 0}
       tintPercent: 1
       startHeight: 0.18
     - gradient:
@@ -172,7 +172,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.11764706, b: 1, a: 0}
+      tint: {r: 0, g: 0.8773585, b: 0.44240996, a: 0}
       tintPercent: 1
       startHeight: 0.22
     - gradient:
@@ -204,7 +204,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.28483582, b: 1, a: 0}
+      tint: {r: 0.11764706, g: 0.8235294, b: 0.6745098, a: 0}
       tintPercent: 1
       startHeight: 0.25
     - gradient:
@@ -236,7 +236,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.11764706, b: 1, a: 0}
+      tint: {r: 0.27020293, g: 0.83154094, b: 0.8679245, a: 0}
       tintPercent: 1
       startHeight: 0.32
     - gradient:
@@ -268,7 +268,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.06104334, b: 0.5188679, a: 0}
+      tint: {r: 0.257031, g: 0.60003793, b: 0.7169812, a: 0}
       tintPercent: 1
       startHeight: 0.39
     - gradient:
@@ -300,7 +300,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.21540463, b: 0.735849, a: 0}
+      tint: {r: 0.11764706, g: 0.8235294, b: 0.6745098, a: 0}
       tintPercent: 1
       startHeight: 0.4
     - gradient:
@@ -332,7 +332,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.39782923, b: 0.8962264, a: 0}
+      tint: {r: 0.18039216, g: 0.9137255, b: 0.6744985, a: 0}
       tintPercent: 1
       startHeight: 0.44
     - gradient:
@@ -364,7 +364,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.11764706, b: 1, a: 0}
+      tint: {r: 0.10181559, g: 0.8301887, b: 0.40540117, a: 0}
       tintPercent: 1
       startHeight: 0.53
     - gradient:
@@ -396,7 +396,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.0075767264, g: 0, b: 0.6415094, a: 0}
+      tint: {r: 0.03791386, g: 0.6698113, b: 0.4636746, a: 0}
       tintPercent: 1
       startHeight: 0.56
     - gradient:
@@ -428,7 +428,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.4056604, g: 0.5455142, b: 1, a: 0}
+      tint: {r: 0.1802243, g: 0.5899836, b: 0.764151, a: 0}
       tintPercent: 1
       startHeight: 0.77
     - gradient:
@@ -460,7 +460,7 @@ MonoBehaviour:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0, g: 0.11764706, b: 1, a: 0}
+      tint: {r: 0.11764706, g: 0.8235294, b: 0.6745098, a: 0}
       tintPercent: 1
       startHeight: 0.89
     noise:
@@ -491,8 +491,8 @@ MonoBehaviour:
     stripes: []
   oceanColor:
     serializedVersion: 2
-    key0: {r: 0, g: 0.11764706, b: 1, a: 1}
-    key1: {r: 0, g: 0.11764706, b: 1, a: 1}
+    key0: {r: 0.8584906, g: 0, b: 0.008193754, a: 1}
+    key1: {r: 0.8301887, g: 0.4869597, b: 0, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}

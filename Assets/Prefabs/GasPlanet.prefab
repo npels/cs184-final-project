@@ -1774,6 +1774,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9e9ac11d303dc4ddc99c5663158e99e3, type: 2}
   - {fileID: 2100000, guid: c6722fbf2d61143fc80c217002aea7dd, type: 2}
   - {fileID: 2100000, guid: 50d50f1fd49e04382a2a24fffd13b8c1, type: 2}
+  star: {fileID: 0}
+  isCinemaShot: 0
 --- !u!54 &7187574677929242441
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1926,6 +1928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 7646477868511451102}
+  rings: {fileID: 765058407650841981}
   material: {fileID: 2100000, guid: 3f2c7032c7c7e984ba117aa26b6c1969, type: 2}
 --- !u!114 &765058407650841981
 MonoBehaviour:
@@ -1943,7 +1946,7 @@ MonoBehaviour:
   innerRadius: 10.5
   outerRadius: 15
   ringMat: {fileID: 2100000, guid: c5e21e1bc62a31d458738a7e7cb472bd, type: 2}
-  ringColor: {r: 0.8396226, g: 0, b: 0.0719661, a: 0}
+  ringColor: {r: 0.7169812, g: 0, b: 0.06030684, a: 0}
 --- !u!1 &1737172024059141678
 GameObject:
   m_ObjectHideFlags: 0
