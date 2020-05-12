@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
 
     void CreateGasPlanetAroundStar(Star star)
     {
-        for (int i = 0; i < 2; i++)
+        int gasNum = Random.Range(1, 5);
+        for (int i = 0; i < gasNum; i++)
         {
             GameObject planet = GameObject.Instantiate(gasPlanetPrefab);
             PlanetOrbiter planetOrbiter = planet.GetComponent<PlanetOrbiter>();
